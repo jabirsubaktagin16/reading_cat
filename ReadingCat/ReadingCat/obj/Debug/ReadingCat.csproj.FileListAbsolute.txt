@@ -1,0 +1,228 @@
+H:\ReadingCat\ReadingCat\bin\ReadingCat.dll.config
+H:\ReadingCat\ReadingCat\bin\ReadingCat.dll
+H:\ReadingCat\ReadingCat\bin\ReadingCat.pdb
+H:\ReadingCat\ReadingCat\bin\roslyn\csc.exe
+H:\ReadingCat\ReadingCat\bin\roslyn\csc.exe.config
+H:\ReadingCat\ReadingCat\bin\roslyn\csc.rsp
+H:\ReadingCat\ReadingCat\bin\roslyn\csi.exe
+H:\ReadingCat\ReadingCat\bin\roslyn\csi.exe.config
+H:\ReadingCat\ReadingCat\bin\roslyn\csi.rsp
+H:\ReadingCat\ReadingCat\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CSharp.Core.targets
+H:\ReadingCat\ReadingCat\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\Microsoft.Managed.Core.targets
+H:\ReadingCat\ReadingCat\bin\roslyn\Microsoft.VisualBasic.Core.targets
+H:\ReadingCat\ReadingCat\bin\roslyn\System.AppContext.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Collections.Immutable.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Console.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Diagnostics.StackTrace.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.IO.Compression.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.IO.FileSystem.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.IO.FileSystem.Primitives.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.IO.Pipes.AccessControl.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.IO.Pipes.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Reflection.Metadata.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Security.AccessControl.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Security.Claims.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Security.Cryptography.Encoding.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Security.Cryptography.Primitives.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Security.Principal.Windows.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Text.Encoding.CodePages.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.ValueTuple.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Xml.ReaderWriter.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Xml.XmlDocument.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Xml.XPath.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\System.Xml.XPath.XDocument.dll
+H:\ReadingCat\ReadingCat\bin\roslyn\vbc.exe
+H:\ReadingCat\ReadingCat\bin\roslyn\vbc.exe.config
+H:\ReadingCat\ReadingCat\bin\roslyn\vbc.rsp
+H:\ReadingCat\ReadingCat\bin\roslyn\VBCSCompiler.exe
+H:\ReadingCat\ReadingCat\bin\roslyn\VBCSCompiler.exe.config
+H:\ReadingCat\ReadingCat\bin\Antlr3.Runtime.dll
+H:\ReadingCat\ReadingCat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+H:\ReadingCat\ReadingCat\bin\Microsoft.Web.Infrastructure.dll
+H:\ReadingCat\ReadingCat\bin\Newtonsoft.Json.dll
+H:\ReadingCat\ReadingCat\bin\System.Web.Helpers.dll
+H:\ReadingCat\ReadingCat\bin\System.Web.Mvc.dll
+H:\ReadingCat\ReadingCat\bin\System.Web.Optimization.dll
+H:\ReadingCat\ReadingCat\bin\System.Web.Razor.dll
+H:\ReadingCat\ReadingCat\bin\System.Web.WebPages.Deployment.dll
+H:\ReadingCat\ReadingCat\bin\System.Web.WebPages.dll
+H:\ReadingCat\ReadingCat\bin\System.Web.WebPages.Razor.dll
+H:\ReadingCat\ReadingCat\bin\WebGrease.dll
+H:\ReadingCat\ReadingCat\bin\System.Web.Helpers.xml
+H:\ReadingCat\ReadingCat\bin\System.Web.Mvc.xml
+H:\ReadingCat\ReadingCat\bin\System.Web.Optimization.xml
+H:\ReadingCat\ReadingCat\bin\System.Web.Razor.xml
+H:\ReadingCat\ReadingCat\bin\System.Web.WebPages.xml
+H:\ReadingCat\ReadingCat\bin\System.Web.WebPages.Deployment.xml
+H:\ReadingCat\ReadingCat\bin\System.Web.WebPages.Razor.xml
+H:\ReadingCat\ReadingCat\bin\Newtonsoft.Json.xml
+H:\ReadingCat\ReadingCat\bin\Antlr3.Runtime.pdb
+H:\ReadingCat\ReadingCat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+H:\ReadingCat\ReadingCat\obj\Debug\ReadingCat.csprojAssemblyReference.cache
+H:\ReadingCat\ReadingCat\obj\Debug\ReadingCat.csproj.CoreCompileInputs.cache
+H:\ReadingCat\ReadingCat\obj\Debug\ReadingCat.csproj.CopyComplete
+H:\ReadingCat\ReadingCat\obj\Debug\ReadingCat.dll
+H:\ReadingCat\ReadingCat\obj\Debug\ReadingCat.pdb
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\ReadingCat.dll.config
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\ReadingCat.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\ReadingCat.pdb
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\csc.exe
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\csc.exe.config
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\csc.rsp
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\csi.exe
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\csi.exe.config
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\csi.rsp
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.AppContext.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Console.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.IO.Compression.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.IO.Pipes.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Security.Claims.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.ValueTuple.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Xml.XPath.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\vbc.exe
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\vbc.exe.config
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\vbc.rsp
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\VBCSCompiler.exe
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\Antlr3.Runtime.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\Newtonsoft.Json.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.Helpers.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.Mvc.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.Optimization.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.Razor.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.WebPages.Deployment.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.WebPages.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.WebPages.Razor.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\WebGrease.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.Helpers.xml
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.Mvc.xml
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.Optimization.xml
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.Razor.xml
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.WebPages.xml
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.WebPages.Deployment.xml
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\System.Web.WebPages.Razor.xml
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\Newtonsoft.Json.xml
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\Antlr3.Runtime.pdb
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\obj\Debug\ReadingCat.csprojAssemblyReference.cache
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\obj\Debug\ReadingCat.csproj.CoreCompileInputs.cache
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\obj\Debug\ReadingCat.csproj.CopyComplete
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\obj\Debug\ReadingCat.dll
+C:\Users\aniqu\Downloads\ReadingCat\ReadingCat\ReadingCat\obj\Debug\ReadingCat.pdb
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\ReadingCat.dll.config
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\ReadingCat.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\ReadingCat.pdb
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\csc.exe
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\csc.exe.config
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\csc.rsp
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\csi.exe
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\csi.exe.config
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\csi.rsp
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.AppContext.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Console.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.IO.Compression.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.IO.Pipes.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Security.Claims.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.ValueTuple.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Xml.XPath.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\vbc.exe
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\vbc.exe.config
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\vbc.rsp
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\VBCSCompiler.exe
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\Antlr3.Runtime.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\Newtonsoft.Json.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.Helpers.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.Mvc.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.Optimization.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.Razor.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.WebPages.Deployment.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.WebPages.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.WebPages.Razor.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\WebGrease.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.Helpers.xml
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.Mvc.xml
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.Optimization.xml
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.Razor.xml
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.WebPages.xml
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.WebPages.Deployment.xml
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\System.Web.WebPages.Razor.xml
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\Newtonsoft.Json.xml
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\Antlr3.Runtime.pdb
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\obj\Debug\ReadingCat.csprojAssemblyReference.cache
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\obj\Debug\ReadingCat.csproj.CoreCompileInputs.cache
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\obj\Debug\ReadingCat.csproj.CopyComplete
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\obj\Debug\ReadingCat.dll
+C:\Users\aniqu\Documents\Web Projects\ReadingCat\ReadingCat\obj\Debug\ReadingCat.pdb

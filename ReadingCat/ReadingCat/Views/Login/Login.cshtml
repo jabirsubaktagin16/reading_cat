@@ -1,0 +1,43 @@
+﻿@model ReadingCat.Models.DatabaseCombinedWithOtherModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <!-- Main css -->
+    <link rel="stylesheet" href="~/css/login.css">
+</head>
+<body>
+    @Html.Raw(TempData["msg"])
+    @Html.Raw(TempData["complete"])
+    @Html.Raw(TempData["valid"])
+    @Html.Raw(TempData["notloggedin"])
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form">
+            </form>
+            @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+            {
+                <form class="login-form">
+                    @Html.EditorFor(model => model.LoginModel.username, new { htmlAttributes = new { @class = "login.css", @placeholder = "username", @required = true } })
+                    @Html.ValidationMessageFor(model => model.LoginModel.username)
+                    @Html.PasswordFor(model => model.LoginModel.password, new { htmlAttributes = new { @class = "login.css", @placeholder = "password", @Autocomplete = "off", @required = true } })
+
+                    @Html.ValidationMessageFor(model => model.LoginModel.password)
+                    <div class="form-submit">
+                        <button type="submit" value="Submit" class="submit" id="submit" name="submit">Login</button>
+                    </div>
+                    <p class="message">Not registered? <a href="@Url.Action("Register1", "Register")">Create an account</a></p>
+                </form>
+            }
+        </div>
+    </div>
+
+    <img class="coffee-image" src="~/images/coffee.gif" alt="">
+</body>
+</html>

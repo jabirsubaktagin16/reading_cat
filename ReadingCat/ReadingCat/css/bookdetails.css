@@ -1,0 +1,91 @@
+﻿body {
+    background-image: url(catwallpaper.png);
+    background-repeat: no-repeat;
+    background-size: 750px;
+    background-position-x: right;
+    background-color: #F7F7F7;
+    font-size: 12px;
+}
+
+.box {
+    background-color:white;
+    padding: 20px;
+    box-shadow: 5px 10px 8px 10px #c7c7c7;
+    width: 600px;
+    height: 900px;
+    margin: 10px auto;
+    padding-right: 200px;
+    font-family: DejaVu Sans Mono, monospace;
+}
+
+    .box img {
+        width: 250px;
+        height: 300px
+    }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.rate {
+    margin-left: 20px;
+    float: left;
+    height: 40px;
+}
+
+    .rate:not(:checked) > input {
+        position: absolute;
+        top: -9999px;
+    }
+
+    .rate:not(:checked) > label {
+        float: right;
+        width: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 30px;
+        color: #ccc;
+    }
+
+        .rate:not(:checked) > label:before {
+            content: '★ ';
+        }
+
+    .rate > input:checked ~ label {
+        color: #ffc700;
+    }
+
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        color: #deb217;
+    }
+
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08;
+    }
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+.my-custom-scrollbar {
+    position: relative;
+    height: 170px;
+    width: 500px;
+    overflow: auto;
+    margin-left: 45px;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}

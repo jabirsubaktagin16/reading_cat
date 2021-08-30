@@ -1,0 +1,213 @@
+﻿@model ReadingCat.ViewModel.NewStoryInfo
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NewStory</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>BookDetails</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/newstory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/newstory.css">
+    <style>
+        .footercontainer{
+            display : none;
+        }
+        .dbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            width: 200px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .ddown {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+        }
+
+        .ddown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            width: 200px;
+        }
+
+            .ddown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                width: 200px;
+            }
+
+                .ddown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .ddown:hover .ddown-content {
+            display: block;
+        }
+
+        .ddown:hover .dbtn {
+            background-color: #3e8e41;
+        }
+
+        .down {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-contact100">
+
+        <div class="wrap-contact100">
+
+            <span class="contact100-form-title">
+                Story Details
+            </span>
+
+            @using (Html.BeginForm("NewStory", "Write", FormMethod.Post, new { encType = "multipart/form-data" }))
+            {
+
+                @Html.HiddenFor(model => model.tags.tagName)
+                <div>
+                    <label class="label-input100" for="image">Upload Book Cover</label>
+                    <div class="container">
+
+                        <div class="well" data-bind="fileDrag: fileData">
+                            <div class="form-group row">
+
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.file, new { htmlAttributes = new { @class = "form-control" }, type = "file", name = "file" })<br /><br />
+                                    <!-- <input type="file"> -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+
+                <label class="label-input100">Title</label>
+                <div class="wrap-input100 validate-input">
+                    @Html.EditorFor(model => model.books.bookName, new { htmlAttributes = new { @id = "title", @class = "input100" } })
+                    @Html.ValidationMessageFor(model => model.books.bookName);
+                    <!-- <input id="title" class="input100" type="text"> -->
+                    <span class="focus-input100"></span>
+                </div>
+
+                <label class="label-input100" for="email"></label>
+
+
+
+                <label class="label-input100" for="message">Description</label>
+                <div class="wrap-input100 validate-input">
+                    @Html.EditorFor(model => model.books.summary, new { htmlAttributes = new { @id = "description", @class = "input100" } })
+                    @Html.ValidationMessageFor(model => model.books.summary);
+                    <!-- <textarea id="description" class="input100" name="message"></textarea> -->
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="row">
+                    <div class="col-md-4" style="">
+                        <div class="container-contact100-form-btn">
+                            <button class="contact100-form-btn" onclick="location.href = '@Url.Action("Profile", "Profile", new { @id = (int)System.Web.HttpContext.Current.Session["Id"]})'">
+                                <span>
+                                    Cancel
+                                    <i class="zmdi zmdi-arrow-right m-l-8"></i>
+                                </span>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6" style="padding-left:210px;">
+                        <div class="container-contact100-form-btn">
+                            <button type="submit" class="contact100-form-btn">
+                                <span>
+                                    Confirm
+                                    <i class="zmdi zmdi-arrow-right m-l-8"></i>
+                                </span>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+
+    <script lang="">
+        $(function () {
+            var viewModel = {};
+            viewModel.fileData = ko.observable({
+                dataURL: ko.observable(),
+                // base64String: ko.observable(),
+            });
+            viewModel.multiFileData = ko.observable({
+                dataURLArray: ko.observableArray(),
+            });
+            viewModel.onClear = function (fileData) {
+                if (confirm('Are you sure?')) {
+                    fileData.clear && fileData.clear();
+                }
+            };
+            viewModel.debug = function () {
+                window.viewModel = viewModel;
+                console.log(ko.toJSON(viewModel));
+                debugger;
+            };
+            ko.applyBindings(viewModel);
+        });
+
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+
+
+
+</body>
+</html>

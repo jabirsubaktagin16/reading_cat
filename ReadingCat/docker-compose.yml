@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  readingcat:
+    image: ${DOCKER_REGISTRY-}readingcat
+    build:
+      context: .\ReadingCat
+      dockerfile: Dockerfile

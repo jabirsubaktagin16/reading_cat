@@ -1,0 +1,129 @@
+﻿@model ReadingCat.Models.Books
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width" />
+    <title>NewStory</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>BookDetails</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/newstory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="~/css/writestory.css">
+    <link rel="stylesheet" type="text/css" href="~/css/readStory.css">
+    <title>WriteStory</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .footercontainer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        <br />
+        <br />
+        <div class="switch">
+            Dark mode:
+            <span class="inner-switch">OFF</span>
+        </div>
+
+        <div class="page">
+            @if ((int)System.Web.HttpContext.Current.Session["admin"] == 1)
+            {
+                var reviewing = (int)System.Web.HttpContext.Current.Session["review"];
+                if (reviewing == 1 && Model.currentChapter.approved == 0)
+                {
+                    <div class="col-md-4">
+                        <button class="btn btn-danger" onclick="location.href ='@Url.Action("Disapprove", "Admin", new { @id = Model.currentChapter.chapterId })'">Disapprove</button>
+                        <button class="btn btn-primary" onclick="location.href ='@Url.Action("Publish", "Admin", new { @id = Model.currentChapter.chapterId })'">Approve</button>
+
+                    </div>
+                }
+                else
+                {
+
+                    <div class="col-md-4">
+                        <button class="btn btn-primary">Approved</button>
+
+
+                    </div>
+
+                }
+            }
+            <div class="dropdown" id="chapter">
+                <button class="btn btn-default" type="button" data-toggle="dropdown">
+                    <div style="color:dodgerblue;">@Model.currentChapter.chapterName</div>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="@Url.Action("BookDetails", "Book", new { @id = Model.bookId })">@Model.bookName</a></li>
+                    <li class="divider"></li>
+                    @{
+                        var totalChapters = Model.chapters.Count;
+                    }
+                    @for (int i = 0; i < Model.chapters.Count; i++)
+                    {
+                        <li><a href="@Url.Action("ReadBook", "Read", new { @id = Model.chapters[i].chapterId })">@Model.chapters[i].chapterName</a></li>
+
+                    }
+                </ul>
+            </div>
+            <div>  <h1>@Model.currentChapter.chapterName</h1></div>
+            <br />
+
+            <hr />
+            <br />
+            <div>
+                <div id="bodydesc" style="margin-left:auto; margin-right:auto; width:800px; height: 600px; overflow-y: scroll;">
+                    <p>
+                        @Model.currentChapter.chatpterText
+                    </p>
+
+                </div>
+                <br />
+                <br />
+                <div class="row">
+                    @if (Model.currentChapter.chapterName != Model.chapters[0].chapterName)
+                    {
+                        <div class="col-md-4">
+                            <button class="btn btn-primary" style="margin-left:50px;width:100px;" onclick="location.href = '@Url.Action("ReadBook", "Read", new { @id = Model.currentChapter.chapterId - 1 })'">Previous</button>
+                        </div>
+                    }
+                    <div class="col-md-4">
+
+
+                    </div>
+                    @if(Model.currentChapter.chapterName != Model.chapters[totalChapters-1].chapterName)
+                    {<div class="col-md-4">
+                        <button class="btn btn-primary" style="margin-left:70px;width:100px;" onclick="location.href = '@Url.Action("ReadBook", "Read", new { @id = Model.currentChapter.chapterId + 1 })'">Next</button>
+                    </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+        <br />
+
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="~/css/script.js"></script>
+</body>
+</html>
+

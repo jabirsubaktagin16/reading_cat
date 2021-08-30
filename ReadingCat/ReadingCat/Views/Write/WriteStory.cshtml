@@ -1,0 +1,71 @@
+﻿@model ReadingCat.Models.Chapters
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width" />
+    <title>NewStory</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>BookDetails</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/newstory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="~/css/writestory.css">
+    <title>WriteStory</title>
+    <style>
+        .footercontainer{
+            display : none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <br />
+        @using (Html.BeginForm("WriteStory", "Write", FormMethod.Post))
+        {
+        <div class="page">
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                   
+                </div>
+            </div>
+            <hr />
+
+            <div>
+                @Html.EditorFor(model => model.chapterName, new { htmlAttributes = new { @class = "w3-input", @type ="text", @placeholder="TITLE" } })
+                @Html.ValidationMessageFor(model => model.chapterName)
+
+            </div>
+            <br />
+
+            <hr />
+            <br />
+            <div  style="font-size:12px;margin-left:50px">
+                @Html.TextAreaFor(model => model.chatpterText, new {@rows=80, @cols=100 } )
+                @Html.ValidationMessageFor(model => model.chatpterText)
+
+            </div>
+        </div>
+        <br />
+        }
+    </div>
+        
+</body>
+</html>

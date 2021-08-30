@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbarCustom {
+            overflow: hidden;
+            background-color: #A2C9CA;
+        }
+
+            .navbarCustom a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .dropdownCustom {
+            float: left;
+            overflow: hidden;
+            margin-top: 18px;
+        }
+
+            .dropdownCustom .dropbtnCustom {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbarCustom a:hover, .dropdownCustom:hover .dropbtnCustom {
+                background-color: #ffd9b0;
+            }
+
+        .dropdownCustom-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdownCustom-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .dropdownCustom-content a:hover {
+                    background-color: #ffd9b0;
+                }
+
+        .dropdownCustom:hover .dropdownCustom-content {
+            display: block;
+        }
+
+        .navbarCustom .search-container {
+            float: right;
+        }
+
+        .navbarCustom input[type=text] {
+            padding: 6px;
+            margin-top: 18px;
+            font-size: 17px;
+            border: none;
+        }
+
+        .navbarCustom .search-container button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 18px;
+            margin-right: 116px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+            .navbarCustom .search-container button:hover {
+                background: #ccc;
+            }
+    </style>
+</head>
+<body>
+    <div class="navbarCustom">
+        <a href="@Url.Action("HomePage", "HomePage")"><img src="~/images/catlogo.png" id="logo" /></a>
+
+        <div class="search-container">
+            <form action="">
+            </form>
+
+            @using (Html.BeginForm("Index", "Search", FormMethod.Post, new { encType = "multipart/form-data" }))
+            {
+                <input type="text" placeholder="Search.." name="id">
+                // <input type="submit" class="btn btn-primary" value="&#xf002" />
+                // <input type="submit" />
+                <button type="submit"><i class="fa fa-search"></i></button>
+            }
+
+        </div>
+
+
+
+        @if (Session["Id"] != null)
+        {
+            <div class="dropdownCustom">
+                <button class="dropbtnCustom">
+                    write
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdownCustom-content">
+                    <a href="@Url.Action("AddBookTag","Write")">New Story</a>
+                    <a href="@Url.Action("ViewPublished","Write")">Continue Previous</a>
+
+                </div>
+            </div>
+            <div class="dropdownCustom">
+                <button class="dropbtnCustom">
+                    @Session["username"].ToString()
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdownCustom-content">
+                    <a href="@Url.Action("Profile","Profile", new {@id = (int)System.Web.HttpContext.Current.Session["Id"] })">My Profile</a>
+                    <a href="@Url.Action("ProfileEdit1","Profile", new {@id = (int)System.Web.HttpContext.Current.Session["Id"] })">Settings</a>
+                    <a href="@Url.Action("Login","Login")">Logout</a>
+                </div>
+            </div>
+
+            if ((int)System.Web.HttpContext.Current.Session["admin"] == 1)
+            {
+                <div class="dropdownCustom">
+                    <button class="dropbtnCustom">
+                        admin
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdownCustom-content">
+                        <a href="@Url.Action("SearchUser","Admin")">add admin</a>
+                        <a href="@Url.Action("ViewUnapprovedBooks","Admin")">review pending</a>
+                        <a href="@Url.Action("AddNewGenre","Admin")">add new tags</a>
+
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="dropdownCustom">
+                <button class="dropbtnCustom">
+                    account
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdownCustom-content">
+
+                    <a href="@Url.Action("Login","Login")">Login </a>
+                    <a href="@Url.Action("Register1", "Register")">Register </a>
+                </div>
+            </div>
+        }
+
+    </div>
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <div class="footercontainer" style="background-color:#A2C9CA;width:100%;color:white; bottom: 0; margin-top : 200px">
+        <div class="row" style="opacity:0.8">
+            <div class="col-sm-4">
+                <br />
+                <p>All Books, Character Designs and Logos are © to their respective copyright holders</p>
+
+            </div>
+            <div class="col-sm-4">
+                <br />
+                <p> © 2010-2019 www.readingcat.me. Read Fastest Updated Free Books Online at www.readingcat.me. </p>
+
+            </div>
+            <div class="col-sm-4">
+                <br />
+                <p><a style="color:white">Reading Cat</a>| <a style="color:white">Home</a> | <a style="color:white">Latest Updates</a> | <a style="color:white">Contact Us</a> | <a style="color:white">Privacy Policy</a> | <a style="color:white">Terms of Service</a></p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.js"></script>
+</body>
+</html>

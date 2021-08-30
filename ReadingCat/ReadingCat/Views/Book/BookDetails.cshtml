@@ -1,0 +1,356 @@
+﻿@model ReadingCat.Models.Books
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>BookDetails</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/bookdetails.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        #star1:hover {
+            opacity: 0.5;
+        }
+
+        #star2:hover {
+            opacity: 0.5;
+        }
+
+        #star3:hover {
+            opacity: 0.5;
+        }
+
+        #star4:hover {
+            opacity: 0.5;
+        }
+
+        #star5:hover {
+            opacity: 0.5;
+        }
+
+        .line {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    @Html.Raw(TempData["notloggedin"]);
+    <div class="box">
+        <div class="row">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-5">
+                <img src="@Url.Content(Model.bookCover)" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+
+            </div>
+            <div class="col-md-5">
+                @if (Model.inLibrary == 0)
+                {
+                    <button class="btn btn-success" onclick="location.href ='@Url.Action("AddBook", "Book", new { @id = @Model.bookId })'" style="width:250px;">Add to Library</button>
+                }
+                else
+                {
+                    <button class="btn btn-success" style="width:250px;">Already In Library</button>
+                }
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+
+            </div>
+            <!-- Get Rating Value here!-->
+            <div class="col-md-6">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        @if (Model.rating == 5)
+                        {
+                            <button id="star1" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star1"></i></button>
+                            <button id="star2" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star2"></i></button>
+                            <button id="star3" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star3"></i></button>
+                            <button id="star4" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star4"></i></button>
+                            <button id="star5" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star5"></i></button>
+
+                            <div class="line">You have rated it 5 star!</div>
+
+                        }
+                        @if (Model.rating == 0)
+                        {
+                            <button id="star1" style="background-color:white;border-color:white;width:15px;" class="btn btn-default" onclick="location.href='@Url.Action("Rating", "Book", new { @id = Model.bookId, @star = 1 })'"><i class="fas fa-star" style="color:white;" id="star1"></i></button>
+                            <button id="star2" style="background-color:white;border-color:white;width:15px;" class="btn btn-default" onclick="location.href='@Url.Action("Rating", "Book", new { @id = Model.bookId, @star = 2 })'"><i class="fas fa-star" style="color:white;" id="star2"></i></button>
+                            <button id="star3" style="background-color:white;border-color:white;width:15px;" class="btn btn-default" onclick="location.href='@Url.Action("Rating", "Book", new { @id = Model.bookId, @star = 3 })'"><i class="fas fa-star" style="color:white;" id="star3"></i></button>
+                            <button id="star4" style="background-color:white;border-color:white;width:15px;" class="btn btn-default" onclick="location.href='@Url.Action("Rating", "Book", new { @id = Model.bookId, @star = 4 })'"><i class="fas fa-star" style="color:white;" id="star4"></i></button>
+                            <button id="star5" style="background-color:white;border-color:white;width:15px;" class="btn btn-default" onclick="location.href='@Url.Action("Rating", "Book", new { @id = Model.bookId, @star = 5 })'"><i class="fas fa-star" style="color:white;" id="star5"></i></button>
+                        }
+                        @if (Model.rating == 1)
+                        {
+                            <button id="star1" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star1"></i></button>
+                            <button id="star2" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:white;" id="star2"></i></button>
+                            <button id="star3" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:white;" id="star3"></i></button>
+                            <button id="star4" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:white;" id="star4"></i></button>
+                            <button id="star5" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:white;" id="star5"></i></button>
+                            <div class="line">You have rated it 1 stars!</div>
+                        }
+                        @if (Model.rating == 2)
+                        {
+                            <button id="star1" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star1"></i></button>
+                            <button id="star2" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star2"></i></button>
+                            <button id="star3" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:white;" id="star3"></i></button>
+                            <button id="star4" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:white;" id="star4"></i></button>
+                            <button id="star5" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:white;" id="star5"></i></button>
+                            <div class="line">You have rated it 2 stars!</div>
+                        }
+                        @if (Model.rating == 3)
+                        {
+                            <button id="star1" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star1"></i></button>
+                            <button id="star2" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star2"></i></button>
+                            <button id="star3" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star3"></i></button>
+                            <button id="star4" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:white;" id="star4"></i></button>
+                            <button id="star5" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:white;" id="star5"></i></button>
+                            <div class="line">You have rated it 3 stars!</div>
+                        }
+                        @if (Model.rating == 4)
+                        {
+                            <button id="star1" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star1"></i></button>
+                            <button id="star2" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star2"></i></button>
+                            <button id="star3" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star3"></i></button>
+                            <button id="star4" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:yellow;" id="star4"></i></button>
+                            <button id="star5" style="background-color:white;border-color:white;width:15px;" class="btn btn-default"><i class="fas fa-star" style="color:white;" id="star5"></i></button>
+
+                            <div class="line">You have rated it 4 stars!</div>
+                        }
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <br />
+        <div class="row" style="">
+            <div class="col-md-5" style="">
+
+            </div>
+            <div class="col-md-offset-4" style="font-weight:bold;margin-left:100px;font-size:14px;">
+                Views:
+            </div>
+            
+
+        </div>
+        <div class="row" style="">
+            <div class="col-md-5" style="">
+
+            </div>
+
+            <div class="col-md-offset-4" style="font-weight:bold;margin-left:100px;">
+                @Model.readCount<a href="#">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                </a>
+            </div>
+            
+
+        </div>
+
+        <br /><br /><br />
+        <div class="row">
+            <div class="col-md-6" style="margin-left:45px;">
+                <div style="font-weight:bold; font-size: 15px;">Author: <p style="font-weight:normal; font-size:12px;"> <a href="@Url.Action("Profile", "Profile", new { @id = Model.userId })"> @Model.author</a></p></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" style="margin-left:45px;">
+                <div style="font-weight:bold; font-size: 15px;">Genre: <p style="font-weight:normal; font-size:12px;"> @Model.tag</p></div>
+            </div>
+        </div>
+        <br />
+        <div class="row" style="margin-left:30px;">
+            <div class="col-md-6">
+                <div style="font-weight:bold; font-size: 15px;">Summary:<p style="font-weight:normal; font-size:12px"> @Model.summary</p></div>
+            </div>
+        </div>
+        <br /><br /><br />
+        <!-- Table consisting of all chapters-->
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+                    <table class="table table-bordered table-striped mb-0">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="font-size:15px;">Chapter</th>
+                                <th scope="col">Chapter Name</th>
+
+
+                            </tr>
+                        </thead>
+
+                        @if (Session["Id"] != null)
+                        {
+                            var check = (int)System.Web.HttpContext.Current.Session["review"];
+                        }
+                        @if (Session["review"] == null || (int)System.Web.HttpContext.Current.Session["review"] == 0)
+                        {
+                            <tbody>
+                                @for (int i = 0; i < Model.chapters.Count; i++)
+                                {
+
+
+                                    var index = (i + 1);
+                                    <tr>
+                                        
+                                        
+                                            @if (Session["Id"]!=null && Model.userId == (int)System.Web.HttpContext.Current.Session["Id"])
+                                            {
+                                            <th scope="row"> @index</th>
+                                                if (Model.chapters[i].approved == 1)
+                                                {
+                                                <td style="font-size : 15px;"><a href="@Url.Action("ReadBook", "Read", new { @id = Model.chapters[i].chapterId })"> @Model.chapters[i].chapterName</a></td>
+                                                }
+                                                else
+                                                {
+                                                <td style="font-size : 15px;"><a href="@Url.Action("ReadBook", "Read", new { @id = Model.chapters[i].chapterId })"> @Model.chapters[i].chapterName (pending)</a></td>
+                                                }
+
+                                            }
+                                            else
+                                            {
+                                                if (Model.chapters[i].approved == 1)
+                                                {
+                                                <th scope="row"> @index</th>
+                                                <td style="font-size : 15px;"><a href="@Url.Action("ReadBook", "Read", new { @id = Model.chapters[i].chapterId })"> @Model.chapters[i].chapterName</a></td>
+                                                }
+                                            }
+                                        
+                                    </tr>
+                                }
+                                
+
+                            </tbody>
+                        }
+                        else
+                        {
+                            <tbody>
+                                @for (int i = 0; i < Model.chapters.Count; i++)
+                                {
+
+
+                                    var index = (i + 1);
+                                    <tr>
+
+                                        @if (Model.chapters[i].approved == 0)
+                                        {
+                                            <th scope="row"> @index</th>
+                                            <td style="font-size : 15px;"><a href="@Url.Action("ReadBook", "Read", new { @id = Model.chapters[i].chapterId })"> @Model.chapters[i].chapterName (pending)</a></td>
+                                        }
+
+                                    </tr>
+                                }
+
+
+                            </tbody>
+
+                        }
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-4"> <h2 style="font-weight:bold;">Comments</h2> </div>
+    </div>
+
+    <hr />
+
+    <div class="comment">
+        @for (int i = 0; i < Model.comments.Count; i++)
+        {
+            <div class="row">
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-4">
+                    <a href="@Url.Action("Profile", "Profile", new { @id = Model.comments[i].userId})" style="font-size: 17px; font-weight : bold;">@Model.comments[i].username</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-11">
+                    <p style="font-size : 15px;"> @Model.comments[i].comment</p>
+                </div>
+            </div>
+
+            <hr />
+        }
+    </div>
+    <hr />
+
+    <div class="WriteComment">
+        <div class="row">
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-11">
+                <h2 style="font-weight:bold;">Write your own comment!</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            @using (Html.BeginForm("BookDetails", "Book", FormMethod.Post))
+            {
+
+                <div class="col-md-11">
+                    <div class="form-group" style="font-size:15px;width:150px;">
+                        @Html.TextAreaFor(model => model.currentComment.comment, new { @class = "form-control", @rows = 5, @id = "comment", @style = "width:1000px;", @Value = "default" })
+                        @Html.ValidationMessageFor(model => model.currentComment.comment)
+                        @Html.HiddenFor(model => model.bookId)
+
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary" style="font-size:15px;">Comment</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $(".line").fadeIn(1000);
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

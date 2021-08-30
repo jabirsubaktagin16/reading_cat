@@ -1,0 +1,398 @@
+﻿@model ReadingCat.ViewModel.LoginAndBookList
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       .dbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  width: 200px;
+  font-size: 16px;
+  border: none;
+}
+
+.ddown {
+  position: relative;
+  display: inline-block;
+  width : 200px;
+}
+
+.ddown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width : 200px;
+}
+
+.ddown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width : 200px;
+}
+
+.ddown-content a:hover {background-color: #ddd;}
+
+.ddown:hover .ddown-content {display: block;}
+
+.ddown:hover .dbtn {background-color: #3e8e41;}
+        .down {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        
+    </style>
+
+    <link rel="stylesheet" href="~/css/home.css">
+    <link rel="stylesheet" href="~/css/profile.css">
+
+</head>
+<body>
+    @Html.Raw(TempData["write"])
+    @Html.Raw(TempData["password"])
+    @Html.Raw(TempData["notloggedin"])
+    <br />
+    <br />
+
+    <div class="row">
+
+        <div class="col-md-2">
+            <div class="item">
+                <div class="pad15">
+                    <div>
+                        @{
+                            var img = Model.loginModel.path;
+                            if (img.IsEmpty())
+                            {
+                                <img src="~/images/profile.png" class="profile" alt=" Image" style="width:200px;height:200px;border:solid;border-color:coral;" />
+
+                            }
+                            else
+                            {
+                                <img src="@Url.Content(img)" class="profile" alt=" Image" style="width:200px;height:200px;border:solid;border-color:coral;" />
+                            }
+                        }
+                        
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-4" style="">
+            <h1 style="font-weight:bold;margin-top:85px;margin-left:100px;"> @Model.loginModel.username </h1>
+            <h5 style="margin-left:100px;"> @Model.loginModel.bio</h5>
+        </div>
+
+        <div class="col-md-6" style="padding-left:30px;margin-top:70px;">
+            <div class="col-md-2"><div style="opacity:0.5;">@Model.loginModel.totalPublished</div></div>
+            <div class="col-md-2"><div style="opacity:0.5;">@Model.loginModel.totalViews</div></div>
+            <div class="col-md-2"><div style="opacity:0.5;">@Model.loginModel.followerNum</div></div>
+            <br />
+            <br />
+            <div class="col-md-2"><div style="font-size:12px;font-weight:bold"><i class="fas fa-typewriter">Published</i></div></div>
+            <div class="col-md-2"><div style="font-size:12px;font-weight:bold">Views</div></div>
+            <div class="col-md-2"><div style="font-size:12px;font-weight:bold">Followers</div></div>
+            <br />
+            <br />
+            @if (Session["Id"] != null)
+            {
+                if ((int)System.Web.HttpContext.Current.Session["Id"] != Model.loginModel.userid)
+                {
+                    if (Model.loginModel.isFollowing == 0)
+                    {
+                        <button class="btn btn-success" onclick="location.href = '@Url.Action("AddFollower", "Profile", new { @id = Model.loginModel.userid })'" style="width:250px;">Follow</button>
+                    }
+                    else
+                    {
+                        <div class="ddown">
+                            <button class="dbtn">Unfollow <i class="fa fa-caret-down"></i></button>
+                            <div class="ddown-content">
+                                <a href="@Url.Action("Unfollow", "Profile", new { @id = Model.loginModel.userid })">Unfollow</a>
+                               
+
+                            </div>
+                        </div>
+
+                    }
+                }
+            }
+            else
+            {
+                <button class="btn btn-success" onclick="location.href = '@Url.Action("AddFollower", "Profile", new { @id = Model.loginModel.userid })'" style="width:250px;">Follow</button>
+            }
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <hr />
+    <br />
+    <br />
+    <div>
+        @if (Session["Id"] != null)
+        {
+        if ((int)System.Web.HttpContext.Current.Session["Id"] == Model.loginModel.userid && Model.booksAndDatabase.listOfBooks[0].Count > 0)
+        {
+
+            <h4 class="headingprofile2" style="margin-left:25px;font-weight:bold;color:black;font-size:25px;">Library</h4>
+            <div class="container">
+                <div class="row">
+                    <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
+                        <div class="MultiCarousel-inner">
+                            @for (int i = 0; i < Model.booksAndDatabase.listOfBooks[0].Count; i++)
+        {
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div class="hovereffect">
+
+                                            @{
+            var selectedId = Model.booksAndDatabase.listOfBooks[0][i].bookId;
+                                            }
+
+                                            <img src="@Url.Content(Model.booksAndDatabase.listOfBooks[0][i].bookCover) " class="img-responsive" />
+                                            <div class="overlay">
+
+                                                <a class="info" href="@Url.Action("BookDetails", "Book", new { @id = selectedId })">Book Details</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            }
+                        </div>
+                        <button class="btn btn-primary leftLst"><</button>
+                        <button class="btn btn-primary rightLst">></button>
+                    </div>
+                </div>
+            </div>
+            }
+            }
+        @if (Model.booksAndDatabase.listOfBooks[1].Count > 0)
+        {
+            <h4 class="headingprofile2" style="margin-left:25px;font-weight:bold;color:black;font-size:25px;">Published Stories</h4>
+            <div class="container">
+                <div class="row">
+                    <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
+                        <div class="MultiCarousel-inner">
+                            @for (int i = 0; i < Model.booksAndDatabase.listOfBooks[1].Count; i++)
+                            {
+                                <div class="item">
+                                    <div class="pad15">
+                                        <div class="hovereffect">
+
+                                            @{
+                                                var selectedId = Model.booksAndDatabase.listOfBooks[1][i].bookId;
+                                            }
+
+                                            <img src="@Url.Content(Model.booksAndDatabase.listOfBooks[1][i].bookCover) " class="img-responsive" />
+                                            <div class="overlay">
+
+                                                <a class="info" href="@Url.Action("BookDetails", "Book", new { @id = selectedId })">Book Details</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <button class="btn btn-primary leftLst"><</button>
+                        <button class="btn btn-primary rightLst">></button>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Session["Id"] != null)
+        {
+            if ((int)System.Web.HttpContext.Current.Session["Id"] == Model.loginModel.userid)
+            {
+                for (int j = 0; j < Model.booksAndDatabase.tagList.Count; j++)
+                {
+                    if (Model.booksAndDatabase.recommendation[j].Count > 0)
+                    {
+                    <h3 class="headingprofile2" style="margin-left: 25px;font-weight:bold;color:black;font-size:25px;">Recommenation by @Model.booksAndDatabase.tagList[j].tagName</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
+                                <div class="MultiCarousel-inner">
+                                    @for (int i = 0; i < Model.booksAndDatabase.recommendation[j].Count; i++)
+
+        {
+                                        <div class="item">
+                                            <div class="pad15">
+                                                <div class="hovereffect">
+                                                    @{
+            var selectedId = Model.booksAndDatabase.recommendation[j][i].bookId;
+                                                    }
+
+                                                    <img src="@Url.Content(Model.booksAndDatabase.recommendation[j][i].bookCover)" class="img-responsive" />
+
+                                                    <div class="overlay">
+
+                                                        <a class="info" href="@Url.Action("BookDetails", "Book", new { @id = selectedId })">Book Details</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            }
+                                </div>
+                                <button class="btn btn-primary leftLst"><</button>
+                                <button class="btn btn-primary rightLst">></button>
+                            </div>
+                        </div>
+                    </div>
+                        }
+                    }
+                }
+            }
+        <script>
+            $(document).ready(function () {
+                var itemsMainDiv = ('.MultiCarousel');
+                var itemsDiv = ('.MultiCarousel-inner');
+                var itemWidth = "";
+
+                $('.leftLst, .rightLst').click(function () {
+                    var condition = $(this).hasClass("leftLst");
+                    if (condition)
+                        click(0, this);
+                    else
+                        click(1, this)
+                });
+
+                ResCarouselSize();
+
+
+
+
+                $(window).resize(function () {
+                    ResCarouselSize();
+                });
+
+                //this function define the size of the items
+                function ResCarouselSize() {
+                    var incno = 0;
+                    var dataItems = ("data-items");
+                    var itemClass = ('.item');
+                    var id = 0;
+                    var btnParentSb = '';
+                    var itemsSplit = '';
+                    var sampwidth = $(itemsMainDiv).width();
+                    var bodyWidth = $('body').width();
+                    $(itemsDiv).each(function () {
+                        id = id + 1;
+                        var itemNumbers = $(this).find(itemClass).length;
+                        btnParentSb = $(this).parent().attr(dataItems);
+                        itemsSplit = btnParentSb.split(',');
+                        $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+                        if (bodyWidth >= 1200) {
+                            incno = itemsSplit[3];
+                            itemWidth = sampwidth / incno;
+                        }
+                        else if (bodyWidth >= 992) {
+                            incno = itemsSplit[2];
+                            itemWidth = sampwidth / incno;
+                        }
+                        else if (bodyWidth >= 768) {
+                            incno = itemsSplit[1];
+                            itemWidth = sampwidth / incno;
+                        }
+                        else {
+                            incno = itemsSplit[0];
+                            itemWidth = sampwidth / incno;
+                        }
+                        $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+                        $(this).find(itemClass).each(function () {
+                            $(this).outerWidth(itemWidth);
+                        });
+
+                        $(".leftLst").addClass("over");
+                        $(".rightLst").removeClass("over");
+
+                    });
+                }
+
+
+                //this function used to move the items
+                function ResCarousel(e, el, s) {
+                    var leftBtn = ('.leftLst');
+                    var rightBtn = ('.rightLst');
+                    var translateXval = '';
+                    var divStyle = $(el + ' ' + itemsDiv).css('transform');
+                    var values = divStyle.match(/-?[\d\.]+/g);
+                    var xds = Math.abs(values[4]);
+                    if (e == 0) {
+                        translateXval = parseInt(xds) - parseInt(itemWidth * s);
+                        $(el + ' ' + rightBtn).removeClass("over");
+
+                        if (translateXval <= itemWidth / 2) {
+                            translateXval = 0;
+                            $(el + ' ' + leftBtn).addClass("over");
+                        }
+                    }
+                    else if (e == 1) {
+                        var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+                        translateXval = parseInt(xds) + parseInt(itemWidth * s);
+                        $(el + ' ' + leftBtn).removeClass("over");
+
+                        if (translateXval >= itemsCondition - itemWidth / 2) {
+                            translateXval = itemsCondition;
+                            $(el + ' ' + rightBtn).addClass("over");
+                        }
+                    }
+                    $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+                }
+
+                //It is used to get some elements from btn
+                function click(ell, ee) {
+                    var Parent = "#" + $(ee).parent().attr("id");
+                    var slide = $(Parent).attr("data-slide");
+                    ResCarousel(ell, Parent, slide);
+                }
+
+            });
+        </script>
+
+        <br />
+
+
+        <!-- Footer -->
+
+
+        <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/js/jquery-1.12.4.min.js">\x3C/script>')</script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+    </div>
+</body>
+</html>

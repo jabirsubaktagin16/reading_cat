@@ -1,0 +1,26 @@
+﻿body {
+    background-image:url("catpattern.png");
+ 
+   
+}
+
+
+.page {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    width: 800px;
+    height: 2000px;
+    margin: 0 auto;
+    box-shadow: 5px 10px #888888;
+    background-color: white;
+    opacity: 1;
+    font-size: 25px;
+}
+
+.w3-input{
+ width:50%;
+ margin: 0 auto;
+ font-size:45px;
+ margin-left:150px;
+}
+

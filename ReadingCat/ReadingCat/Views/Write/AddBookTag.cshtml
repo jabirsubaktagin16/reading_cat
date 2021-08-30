@@ -1,0 +1,66 @@
+﻿@model ReadingCat.Models.Tags
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width" />
+    <title>NewStory</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>BookDetails</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/newstory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="~/css/writestory.css">
+    <link rel="stylesheet" type="text/css" href="~/css/readStory.css">
+    <title>WriteStory</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width" />
+    <title>Tag</title>
+    <link rel="stylesheet" type="text/css" href="~/css/tag.css">
+    <style>
+        .footercontainer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <br />
+        <br />
+        <br />
+        <div class="card">
+            <div class="row" style="padding-left:30px;padding-top:10px;">
+                <p style="font-size:25px;">Choose A Genre For Your Book!</p>
+            </div>
+           
+                <div class="row" style="padding-left:70px;">
+                    @for (int i = 0; i < Model.listOfTags.Count; i++)
+                    {
+                        <div class="col-sm-2">
+                            <button class="btn btn-default" onclick="location.href = '@Url.Action("NewStory", "Write", new {@id = Model.listOfTags[i].tagName })'"> @Model.listOfTags[i].tagName</button>
+                            @Html.HiddenFor(model => model.listOfTags[i].tagId)
+                            @Html.HiddenFor(model => model.listOfTags[i].tagName)
+                        </div>
+
+                    }
+                </div>
+
+
+
+            
+        </div>
+    </div>
+
+</body>
+</html>

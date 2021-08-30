@@ -1,0 +1,109 @@
+﻿@model ReadingCat.Models.User
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>BookDetails</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/bookdetails.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="box">
+        <div class="row">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-5">
+                <img src="@Url.Content(Model.paths)" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+
+            </div>
+            <div class="col-md-5">
+                @using (Html.BeginForm("AddAdmin", "Admin", FormMethod.Post))
+                {
+                    @Html.HiddenFor(model => model.username)
+
+                    @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+                    if (Model.isAdmin == 0)
+                    {
+                        <button class="btn btn-success" style="width:250px;">Add as Admin</button>
+                    }
+                    else
+                    {
+                        <button class="btn btn-success" style="width:250px;">Already an Admin</button>
+                    }
+                }
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+                        <table class="table table-bordered table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="font-size:15px;">Attributes</th>
+                                    <th scope="col">Details</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+
+
+                                    <td style="font-size : 15px;"> Username</a></td>
+
+                                    <td style="font-size : 15px;"><a href="@Url.Action("Profile", "Profile", new { @id = Model.userid })"> @Model.username</a></td>
+
+                                    
+
+                                </tr>
+
+                                <tr>
+
+                                   
+
+                                    <td style="font-size : 15px;">Email ID</a></td>
+
+                                    <td style="font-size : 15px;"> @Model.useremail</a></td>
+
+                                  
+
+                                </tr>
+
+                            </tbody>
+
+
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

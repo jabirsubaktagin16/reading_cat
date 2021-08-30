@@ -1,0 +1,74 @@
+﻿@model ReadingCat.Models.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="~/css/register.css">
+</head>
+<body>
+    <div class="main">
+
+        <div class="container">
+            <div class="book-content">
+                <div class="book-image">
+                    <img class="book-img" src="~/images/register.gif" alt="">
+                </div>
+                <div class="book-form">
+                    @using (Html.BeginForm())
+                    {
+                     @Html.AntiForgeryToken();
+                    <form id="book-form">
+                        <h2>Register Now!</h2>
+                        <div class="form-group form-input">
+                            <label for="name" class="form-label">Username</label>
+                            @Html.TextBox("Username", null, new { @class = "register.css" })
+                            @Html.ValidationMessageFor(model => model.username)
+                        </div>
+                        <div class="form-group form-input">
+                            <label for="email" class="form-label">Email</label>
+                            @Html.TextBox("Email", null, new { @class = "register.css" })
+                            @Html.ValidationMessageFor(model => model.useremail)
+                        </div>
+                        <div class="form-group form-input">
+                            <label for="password" class="form-label">Password</label>
+                            @Html.Password("Password", null, new { @class = "register.css" })
+                            @Html.ValidationMessageFor(model => model.password)
+                        </div>
+                        <div class="form-group form-input">
+                            <label for="confirmpassword" class="form-label">Confirm Password</label>
+                            @Html.Password("ConfirmPassword", null, new { @class = "register.css" })
+                            @Html.ValidationMessageFor(model => model.confirmPassword)
+                        </div>
+                        <br/>
+                        <div class="form-submit">
+                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                        </div>
+                    </form>
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+ <!-- JS -->
+ <script src="vendor/jquery/jquery.min.js"></script>
+ <script src="js/main.js"></script>
+</body>
+</html>

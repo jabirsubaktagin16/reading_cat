@@ -1,0 +1,13 @@
+body {
+    background-image:url(catpattern.png);
+    background-size:contain;
+}
+
+.card {
+    margin: 0 auto;
+    width: 1000px;
+    height: 500px;
+    background-color: white;
+    opacity: 0.9;
+    box-shadow: 10px 10px 8px 10px #888888
+}
